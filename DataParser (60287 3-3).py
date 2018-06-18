@@ -6,7 +6,7 @@ import pandas as pd
 dz = 0.01;
 NN = 500;
 v = np.arange(0, NN + 1)
-ρcr = [0.0026, 0.0049]
+Rhocr = [0.0026, 0.0049]
 at = [3.93 * 10 ** -3, 4.03 * 10 ** -3]
 
 ### Start Enter Directory and Sheet###
@@ -27,9 +27,9 @@ I = Cable.iloc[11];
 R = Cable.iloc[12]  # AC Cable Electrical Parameters
 n = Cable.iloc[2, :]
 A = Cable.iloc[9, :];  # Area of Conductor
-θM = Cable.iloc[10, :];  # Maximum Permissible Temperature
-λ1 = Cable.iloc[13, :];
-λ2 = Cable.iloc[14, :]  # Loss Factors
+ThetaM = Cable.iloc[10, :];  # Maximum Permissible Temperature
+Lambda1 = Cable.iloc[13, :];
+Lambda2 = Cable.iloc[14, :]  # Loss Factors
 
 T1 = Cable.iloc[15, :];
 T2 = Cable.iloc[16, :];
@@ -45,17 +45,17 @@ S = Cable.iloc[24, :];
 L = Cable.iloc[25, :];
 B = Cable.iloc[26, :]  # Cable Parameters
 
-ρsoil = Cable.iloc[27, :];
-θA = Cable.iloc[28, :]  # Environment
+RhoSoil = Cable.iloc[27, :];
+ThetaA = Cable.iloc[28, :]  # Environment
 
 V = V.values.astype(float);
 I = I.values.astype(float);
 R = R.values.astype(float)  # AC Cable Electrical Parameters
 n = n.values.astype(float)
 A = A.values.astype(float);  # Area of Conductor
-θM = θM.values.astype(float);  # Maximum Permissible Temperature
-λ1 = λ1.values.astype(float);
-λ2 = λ2.values.astype(float)  # Loss Factors
+ThetaM = ThetaM.values.astype(float);  # Maximum Permissible Temperature
+Lambda1 = Lambda1.values.astype(float);
+Lambda2 = Lambda2.values.astype(float)  # Loss Factors
 
 T1 = T1.values.astype(float);
 T2 = T2.values.astype(float);
@@ -72,7 +72,7 @@ S = S.values.astype(float);
 L = L.values.astype(float);
 B = B.values.astype(float)  # Cable Parameters
 
-ρsoil = ρsoil.values.astype(float);
-θA = θA.values.astype(float)  # Environment
+RhoSoil = RhoSoil.values.astype(float);
+ThetaA = ThetaA.values.astype(float)  # Environment
 
 print(type(V))
